@@ -169,10 +169,10 @@ fn main() {
 
             if board.is_valid() {
                 if state.len() == empty_cells.len() {
-                    board.print();
-                    println!("{iteration} iterations");
                     pb.set_position(empty_cells.len() as u64);
                     pb.finish();
+                    board.print();
+                    println!("{iteration} iterations");
                     return;
                 } else {
                     if state.len() > max_depth {
